@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Carousel",
+    "path": "src/components/Carousel/Carousel.tsx",
+    "rawInfo": {
+      "value": "import Slider from \"react-slick\";\nimport \"slick-carousel/slick/slick.css\";\nimport \"slick-carousel/slick/slick-theme.css\";\nimport \"./carousel.css\";\n\ntype CarouselProps = {\n  images: string[];\n  autoplay: boolean;\n  showDots: boolean;\n};\n\nexport default function Carousel({\n  images,\n  autoplay = false,\n  showDots = false,\n}: CarouselProps) {\n  const settings = {\n    dots: showDots,\n    infinite: true,\n    speed: 500,\n    slidesToShow: 1,\n    slidesToScroll: 1,\n\n    centerPadding: \"60px\",\n  };\n\n  return (\n    <div className=\"slider-container\">\n      <div style={{ visibility: \"hidden\" }}>.</div>\n      <Slider autoplay={autoplay} {...settings}>\n        {images.map((img, i) => (\n          <div key={i}>\n            <img src={img} style={{ height: \"100%\", width: \"100%\" }} />\n          </div>\n        ))}\n      </Slider>\n    </div>\n  );\n}\n"
+    },
+    "props": [
+      {
+        "name": "images",
+        "propType": 1,
+        "defaultValue": null,
+        "attr": "",
+        "dataType": "array",
+        "styleName": "",
+        "previewValue": {
+          "value": [
+            "https://static.locofy.ai/web/made_with_locofy.svg"
+          ]
+        },
+        "actionName": "",
+        "condition": "",
+        "clientId": "6awd6i",
+        "isOptional": false,
+        "expectValues": [],
+        "raw": "string[]",
+        "keys": [
+          {
+            "name": "0",
+            "propType": 1,
+            "defaultValue": null,
+            "attr": "",
+            "dataType": "string",
+            "styleName": "",
+            "actionName": "",
+            "condition": "",
+            "clientId": "uxotoy",
+            "isOptional": true,
+            "expectValues": [],
+            "keys": [],
+            "keyPath": "images.0"
+          }
+        ]
+      },
+      {
+        "name": "autoplay",
+        "propType": 1,
+        "defaultValue": {
+          "value": "false"
+        },
+        "attr": "autoplay",
+        "dataType": "boolean",
+        "styleName": "",
+        "actionName": "",
+        "condition": "",
+        "clientId": "gjy8b0",
+        "isOptional": true,
+        "expectValues": [],
+        "keys": []
+      },
+      {
+        "name": "showDots",
+        "propType": 1,
+        "defaultValue": {
+          "value": "false"
+        },
+        "attr": "",
+        "dataType": "boolean",
+        "styleName": "",
+        "actionName": "",
+        "condition": "",
+        "clientId": "1hgpapf",
+        "isOptional": true,
+        "expectValues": [],
+        "keys": []
+      }
+    ],
+    "import": [
+      {
+        "path": "src/App.tsx",
+        "import": "import Carousel from \"./components/Carousel/Carousel\";",
+        "relativeImport": "import Carousel from \"./components/Carousel/Carousel\";"
+      }
+    ],
+    "lib": [
+      {
+        "name": "react-slick",
+        "version": "^0.30.2"
+      },
+      {
+        "name": "slick-carousel/slick/slick.css",
+        "version": "^1.8.1"
+      },
+      {
+        "name": "slick-carousel/slick/slick-theme.css",
+        "version": "^1.8.1"
+      }
+    ],
+    "codeSettings": {
+      "typescript": true,
+      "cssStyling": "CSS"
+    },
+    "clientId": "4hwsgl",
+    "selectorId": "undefined",
+    "previewItems": [
+      {
+        "url": "https://d3beo87skfz9b9.cloudfront.net/2mLBTcEEpW0iAdG8LEoZMHltsTE/bundle-1726846279989.js",
+        "type": 2
+      }
+    ]
+  }
+]

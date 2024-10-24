@@ -6,3 +6,6 @@
   right: 3% !important;
   z-index: 1;
 }
+.slider-container {
+  width: 100%;
+}

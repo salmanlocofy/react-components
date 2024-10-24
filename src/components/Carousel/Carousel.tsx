@@ -10,7 +10,11 @@ type CarouselProps = {
 };
 
 export default function Carousel({
-  images,
+  images = [
+    "https://picsum.photos/500/200",
+    "https://picsum.photos/501/200",
+    "https://picsum.photos/502/200",
+  ],
   autoplay = false,
   showDots = false,
 }: CarouselProps) {
